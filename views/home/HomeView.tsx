@@ -13,15 +13,18 @@ export const HomeView = () => {
           <a className={styles.headTitleGreen}> Greenly</a>
           <a className={styles.headTitleLightGreen}>.</a>
           <br /> a world?{" "}
-          <div className={styles.flower}>
+          <a className={styles.flower}>
             <Image src={flower} />
-          </div>
+          </a>
         </p>
       </div>
       <div className={styles.image}>
-        <div>
-          <Image src={cactus} />
-        </div>
+        <Image
+          src={cactus}
+          className={styles.cactus}
+          height="550px"
+          width="400px"
+        />
       </div>
       <div className={styles.pros}></div>
     </div>

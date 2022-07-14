@@ -6,7 +6,7 @@
   .homeDescription {
     .headTitle {
       color: #011901;
-      font-size: 3rem;
+      font-size: 4rem;
       font-weight: 500;
       overflow: hidden;
       position: relative;
@@ -20,6 +20,28 @@
       }
       .headTitleLightGreen {
         color: #00b302;
+      }
+    }
+  }
+  .image {
+    margin-left: 80px;
+    width: 23vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: #fff742;
+    border-radius: 50%;
+    border: 1px solid white;
+    span {
+      overflow: visible !important;
+    }
+    .cactus {
+      position: absolute;
+      transform: rotate(10deg) translate(-15px) scale(1.5);
+      span {
+        overflow: visible;
       }
     }
   }
