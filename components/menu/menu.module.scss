@@ -1,0 +1,100 @@
+.wrapper {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .underline {
+    display: flex;
+    border-bottom: 1px solid #e7e5d6;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    justify-content: center;
+    font-weight: 800;
+    .headName {
+      font-size: 2.8rem;
+      color: #001d01;
+      transition: 0.3s ease;
+      a {
+        color: #00b302;
+      }
+    }
+    .headName:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      color: #00b302;
+      a {
+        color: #001d01;
+      }
+    }
+    .subpageList {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style-type: none;
+      li {
+        margin-left: 30px;
+        margin-right: 30px;
+        font-weight: 400;
+        font-size: 1.5rem;
+        filter: drop-shadow(-4px 4px 0 rgb(211, 206, 206));
+        transition: 0.2s ease;
+      }
+      li:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(-0px 0px 0 rgb(136, 135, 135));
+        cursor: pointer;
+      }
+    }
+    .input {
+      background-color: #ffffff;
+      border-radius: 10px;
+      color: #757575;
+      -webkit-box-shadow: 8px 8px 24px -12px rgba(66, 68, 90, 1);
+      -moz-box-shadow: 8px 8px 24px -12px rgba(66, 68, 90, 1);
+      box-shadow: 8px 8px 24px -12px rgba(66, 68, 90, 1);
+      margin-right: 15px;
+      outline: none;
+      border: 1px solid white;
+      padding: 12px;
+      padding-left: 15px;
+      font-size: 1rem;
+      padding-right: 15px;
+    }
+    .btn {
+      background-color: #00b302;
+      border: 1px solid #00b302;
+      color: white;
+      border-radius: 18px;
+      color: white;
+      padding: 10px;
+      padding-left: 20px;
+      font-size: 1rem;
+      font-weight: 200;
+      padding-right: 20px;
+      font-family: "Montserrat", sans-serif;
+      transition: 0.3s ease;
+    }
+    .btn:hover {
+      cursor: pointer;
+      background-color: #016402;
+      border: 1px solid #016402;
+    }
+    .icons {
+      margin-right: 15px;
+      margin-left: 20px;
+      svg {
+        font-size: 1.5rem;
+        margin-left: 5px;
+        transition: 0.1s ease;
+        margin-right: 5px;
+      }
+      svg:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
+  }
+}
