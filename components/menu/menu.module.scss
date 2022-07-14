@@ -17,6 +17,7 @@
       font-size: 2.8rem;
       color: #001d01;
       transition: 0.3s ease;
+      margin-right: 80px;
       a {
         color: #00b302;
       }
@@ -34,17 +35,18 @@
       justify-content: center;
       align-items: center;
       list-style-type: none;
+      margin-right: 80px;
       li {
         margin-left: 30px;
         margin-right: 30px;
         font-weight: 400;
         font-size: 1.5rem;
-        filter: drop-shadow(-4px 4px 0 rgb(211, 206, 206));
+        filter: drop-shadow(-0px 0px 0 rgb(136, 135, 135));
         transition: 0.2s ease;
       }
       li:hover {
         transform: scale(1.1);
-        filter: drop-shadow(-0px 0px 0 rgb(136, 135, 135));
+        filter: drop-shadow(-4px 4px 0 rgb(211, 206, 206));
         cursor: pointer;
       }
     }
@@ -70,10 +72,10 @@
       border-radius: 18px;
       color: white;
       padding: 10px;
-      padding-left: 20px;
+      padding-left: 30px;
       font-size: 1rem;
       font-weight: 200;
-      padding-right: 20px;
+      padding-right: 30px;
       font-family: "Montserrat", sans-serif;
       transition: 0.3s ease;
     }
@@ -90,6 +92,7 @@
         margin-left: 5px;
         transition: 0.1s ease;
         margin-right: 5px;
+        color: #033a04;
       }
       svg:hover {
         transform: scale(1.1);

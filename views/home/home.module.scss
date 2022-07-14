@@ -2,4 +2,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 70px;
+  .homeDescription {
+    .headTitle {
+      color: #011901;
+      font-size: 3rem;
+      font-weight: 500;
+      overflow: hidden;
+      position: relative;
+      .flower {
+        position: absolute;
+        bottom: -10px;
+        right: 50px;
+      }
+      .headTitleGreen {
+        color: #001d01;
+      }
+      .headTitleLightGreen {
+        color: #00b302;
+      }
+    }
+  }
 }
