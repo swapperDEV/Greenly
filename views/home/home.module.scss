@@ -2,8 +2,69 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
   padding-top: 70px;
+  margin-top: 0px;
   .homeDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .priceStart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 30px;
+      font-size: 1.3rem;
+      div {
+        padding: 10px;
+      }
+      :first-child {
+        border-right: 1px solid #b9b8ab;
+        color: #00b302;
+        font-weight: 600;
+      }
+      :last-child {
+        word-wrap: break-word;
+        max-width: 300px;
+      }
+    }
+    .buy {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        color: white;
+        margin-right: 5px;
+        margin-left: 5px;
+        background-color: #fb5a00;
+        border: 1px solid #fb5a00;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 15px;
+        transition: 0.1s ease;
+        font-size: 1.3rem;
+        svg {
+          margin-left: 10px;
+          padding: 5px;
+          background-color: #fff741;
+          color: #0d0c03;
+          border-radius: 50px;
+          transition: 0.1s ease;
+        }
+      }
+      button:hover {
+        svg {
+          transform: scale(1.1);
+        }
+      }
+    }
     .headTitle {
       color: #011901;
       font-size: 4rem;
@@ -12,8 +73,8 @@
       position: relative;
       .flower {
         position: absolute;
-        bottom: -10px;
-        right: 50px;
+        bottom: -5px;
+        right: 90px;
       }
       .headTitleGreen {
         color: #001d01;
@@ -42,6 +103,44 @@
       transform: rotate(10deg) translate(-15px) scale(1.5);
       span {
         overflow: visible;
+      }
+    }
+  }
+  .pros {
+    margin-left: 80px;
+    .pro {
+      -webkit-box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
+      -moz-box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
+      box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
+    }
+    div {
+      background-color: white;
+      padding: 0px;
+      padding-left: 8px;
+      font-size: 1.2rem;
+      padding-right: 8px;
+      border-radius: 15px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 25px;
+      margin-top: 25px;
+      svg {
+        color: #fe4b24;
+        border-radius: 50px;
+        background-color: #ffefe7;
+      }
+      a {
+        color: #9d9d9d;
+      }
+      p {
+        font-weight: 600;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
       }
     }
   }
