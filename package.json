@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "framer-motion": "^6.5.1",
     "nanoid": "^4.0.0",
     "next": "12.2.2",
     "next-images": "^1.8.4",

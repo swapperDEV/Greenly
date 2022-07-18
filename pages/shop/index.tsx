@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import { SiteTemplate } from "../../components/templates/SiteTemplate";
 
-const Home: NextPage = () => {
+const Shop: NextPage = () => {
   return (
     <>
-      <SiteTemplate view="home" />
+      <SiteTemplate view="shop" />
     </>
   );
 };
 
-export default Home;
+export default Shop;

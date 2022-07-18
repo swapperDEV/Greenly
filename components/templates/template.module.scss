@@ -4,4 +4,12 @@
   flex-direction: column;
   min-height: 100vh;
   min-width: 100%;
+
+  .content {
+    margin-top: 120px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
