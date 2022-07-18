@@ -1,21 +1,25 @@
 .wrapper {
   display: flex;
   justify-content: center;
+  width: 100%;
   align-items: center;
   flex-grow: 1;
-  padding-top: 70px;
-  margin-top: 0px;
+  position: relative;
+  padding-top: 10px;
+  margin-top: 120px;
+  padding-bottom: 50px;
   .homeDescription {
+    margin-right: 160px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     .priceStart {
       display: flex;
       justify-content: center;
       align-items: center;
       padding-top: 30px;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       div {
         padding: 10px;
       }
@@ -55,7 +59,7 @@
     }
   }
   .image {
-    margin-left: 80px;
+    margin-left: 160px;
     width: 23vw;
     display: flex;
     justify-content: center;
@@ -65,6 +69,7 @@
     background-color: #fff742;
     border-radius: 50%;
     border: 1px solid white;
+    position: relative;
     span {
       overflow: visible !important;
     }
@@ -78,40 +83,5 @@
   }
   .pros {
     margin-left: 80px;
-    .pro {
-      -webkit-box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
-      -moz-box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
-      box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
-    }
-    div {
-      background-color: white;
-      padding: 0px;
-      padding-left: 8px;
-      font-size: 1.2rem;
-      padding-right: 8px;
-      border-radius: 15px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      margin-bottom: 25px;
-      margin-top: 25px;
-      svg {
-        color: #fe4b24;
-        border-radius: 50px;
-        background-color: #ffefe7;
-      }
-      a {
-        color: #9d9d9d;
-      }
-      p {
-        font-weight: 600;
-      }
-      div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-      }
-    }
   }
 }

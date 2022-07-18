@@ -1,0 +1,57 @@
+.adventageRight {
+  position: absolute;
+  right: 0%;
+  transform: translateX(50%);
+  svg {
+    background-color: #00b302;
+    color: white;
+    padding: 5px;
+    font-size: 2rem;
+    border-radius: 50px;
+    transition: 0.1s ease;
+  }
+  svg:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+.adventageLeft {
+  position: absolute;
+  left: 0%;
+  transform: translateX(-50%);
+  div {
+    transform: translateX(calc(-100% + 40px));
+    div {
+      transform: translateX(0%);
+    }
+  }
+  svg {
+    background-color: #00b302;
+    color: white;
+    padding: 5px;
+    font-size: 2rem;
+    border-radius: 50px;
+    transition: 0.1s ease;
+  }
+  svg:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+.adventageBottom {
+  position: absolute;
+  bottom: 0%;
+  transform: translate(100%, 50%);
+  svg {
+    background-color: #00b302;
+    color: white;
+    padding: 5px;
+    font-size: 2rem;
+    border-radius: 50px;
+    transition: 0.1s ease;
+  }
+  svg:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}

@@ -3,13 +3,9 @@ import styles from "./home.module.scss";
 import flower from "../../assets/flower.png";
 import cactus from "../../assets/cactus.png";
 import { FaArrowRight } from "@react-icons/all-files/fa/FaArrowRight";
-import { FaWater } from "@react-icons/all-files/fa/FaWater";
-import { FaAirFreshener } from "@react-icons/all-files/fa/FaAirFreshener";
-import { FaStar } from "@react-icons/all-files/fa/FaStar";
-import { FaCloud } from "@react-icons/all-files/fa/FaCloud";
-
 import Image from "next/image";
 import { OrangeButton } from "../../components/atoms/Buttons/OrangeButton/OrangeButton";
+import { FlowerAdventage } from "../../components/organisms/FlowerAdventage/FlowerAdventage";
 export const HomeView = () => {
   return (
     <div className={styles.wrapper}>
@@ -35,7 +31,6 @@ export const HomeView = () => {
         </div>
         <div className={styles.buy}>
           <OrangeButton text={"Buy now"} icon={<FaArrowRight />} />
-          <OrangeButton text={"Stay Tip"} icon={<FaWater />} />
         </div>
       </div>
       <div className={styles.image}>
@@ -45,35 +40,9 @@ export const HomeView = () => {
           height="550px"
           width="400px"
         />
-      </div>
-      <div className={styles.pros}>
-        <div className={styles.pro}>
-          <div>
-            <FaAirFreshener />
-          </div>
-          <div>
-            <p>Oxygen</p>
-            <a>Plants produce oxygen</a>
-          </div>
-        </div>
-        <div className={styles.pro}>
-          <div>
-            <FaCloud />
-          </div>
-          <div>
-            <p>Wetter</p>
-            <a>Makes Houses wetter</a>
-          </div>
-        </div>
-        <div className={styles.pro}>
-          <div>
-            <FaStar />
-          </div>
-          <div>
-            <p>Look</p>
-            <a>Room look better</a>
-          </div>
-        </div>
+        <FlowerAdventage position="right" />
+        <FlowerAdventage position="left" />
+        <FlowerAdventage position="bottom" />
       </div>
     </div>
   );
