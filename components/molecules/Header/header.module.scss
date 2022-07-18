@@ -1,0 +1,17 @@
+.header {
+  font-size: 2.8rem;
+  color: #001d01;
+  transition: 0.3s ease;
+  margin-right: 80px;
+  a {
+    color: #00b302;
+  }
+}
+.header:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: #00b302;
+  a {
+    color: #001d01;
+  }
+}

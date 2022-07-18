@@ -1,0 +1,27 @@
+.wrapper {
+  min-height: 80px;
+  top: 0%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+  width: 100%;
+  justify-content: center;
+  z-index: 1;
+  .underline {
+    display: flex;
+    border-bottom: 1px solid #e7e5d6;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    justify-content: center;
+    font-weight: 800;
+  }
+}
+
+.wrapperFixed {
+  background-color: #f5f3e6;
+  opacity: 0.9;
+}

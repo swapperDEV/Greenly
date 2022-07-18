@@ -1,0 +1,20 @@
+.btn {
+  background-color: #00b302;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #00b302;
+  color: white;
+  border-radius: 18px;
+  color: white;
+  padding: 10px;
+  padding-left: 30px;
+  font-size: 1rem;
+  font-weight: 200;
+  padding-right: 30px;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s ease;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #016402;
+  border: 1px solid #016402;
+}

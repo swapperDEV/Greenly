@@ -1,12 +1,12 @@
 import React from "react";
-import { Footer } from "../footer/Footer";
-import { Menu } from "../menu/Menu";
+import { Footer } from "../organisms/Footer/Footer";
+import { Navbar } from "../organisms/Navbar/Navbar";
 import { HomeView } from "../../views/home/HomeView";
 import template from "./template.module.scss";
 export const SiteTemplate = ({ view }: { view: string }) => {
   return (
     <div className={template.wrapper}>
-      <Menu />
+      <Navbar />
       {view === "home" && <HomeView />}
       <Footer />
     </div>

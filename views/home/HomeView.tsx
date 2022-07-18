@@ -9,6 +9,7 @@ import { FaStar } from "@react-icons/all-files/fa/FaStar";
 import { FaCloud } from "@react-icons/all-files/fa/FaCloud";
 
 import Image from "next/image";
+import { OrangeButton } from "../../components/atoms/Buttons/OrangeButton/OrangeButton";
 export const HomeView = () => {
   return (
     <div className={styles.wrapper}>
@@ -33,12 +34,8 @@ export const HomeView = () => {
           </div>
         </div>
         <div className={styles.buy}>
-          <button>
-            Buy now <FaArrowRight />
-          </button>
-          <button>
-            Stay Tip <FaWater />
-          </button>
+          <OrangeButton text={"Buy now"} icon={<FaArrowRight />} />
+          <OrangeButton text={"Stay Tip"} icon={<FaWater />} />
         </div>
       </div>
       <div className={styles.image}>

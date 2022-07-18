@@ -1,0 +1,18 @@
+.footerPlant {
+  span {
+    overflow: visible !important;
+  }
+  img {
+    transform: scale(2) translateY(-10px);
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+  .plantDescription {
+    margin-left: 45px;
+    a {
+      color: #d64c01;
+    }
+  }
+}

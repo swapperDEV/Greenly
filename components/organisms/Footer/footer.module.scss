@@ -1,0 +1,25 @@
+.wrapper {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  .footer {
+    background-color: #3a130c;
+    padding-bottom: 25px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .footerChild {
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+    .footerDescription {
+      padding-right: 20px;
+      border-right: 1px solid #b9b8ab;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.subpageList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin-right: 80px;
+  li {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    filter: drop-shadow(-0px 0px 0 rgb(136, 135, 135));
+    transition: 0.2s ease;
+  }
+  li:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(-4px 4px 0 rgb(211, 206, 206));
+    cursor: pointer;
+  }
+}
+.icons {
+  margin-right: 15px;
+  margin-left: 20px;
+  svg {
+    font-size: 1.5rem;
+    margin-left: 5px;
+    transition: 0.1s ease;
+    margin-right: 5px;
+    color: #033a04;
+  }
+  svg:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
