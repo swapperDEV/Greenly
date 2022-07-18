@@ -5,12 +5,17 @@ import { FaShoppingCart } from "@react-icons/all-files/fa/FaShoppingCart";
 import { NavbarListButton } from "../../atoms/NavbarListButton/NavbarListButton";
 import { GreenButton } from "../../atoms/Buttons/GreenButton/GreenButton";
 export const NavbarList = () => {
-  const subpagesList = ["Home", "Shop", "About Us", "Your Orders"];
+  const subpagesList = [
+    { name: "Home", link: "home" },
+    { name: "Shop", link: "shop" },
+    { name: "About us", link: "about" },
+    { name: "Your Orders", link: "orders" },
+  ];
   return (
     <>
       <ul className={styles.subpageList}>
-        {subpagesList.map((name: string) => (
-          <NavbarListButton name={name} />
+        {subpagesList.map((n: { name: string; link: string }) => (
+          <NavbarListButton name={n.name} link={n.link} />
         ))}
       </ul>
       <div className={styles.icons}>

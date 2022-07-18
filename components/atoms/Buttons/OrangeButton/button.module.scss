@@ -17,13 +17,15 @@
   svg {
     margin-left: 10px;
     padding: 5px;
+    font-size: 2rem;
     background-color: #fff741;
-    color: #0d0c03;
+    color: #fb5a00;
     border-radius: 50px;
     transition: 0.1s ease;
   }
 }
 .btn:hover {
+  cursor: pointer;
   svg {
     transform: scale(1.1);
   }

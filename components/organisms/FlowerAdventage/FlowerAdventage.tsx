@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaPlus } from "@react-icons/all-files/fa/FaPlus";
 import { FaMinus } from "@react-icons/all-files/fa/FaMinus";
 import styles from "./floweradventage.module.scss";
@@ -11,6 +11,11 @@ export const FlowerAdventage = ({ position }: { position: string }) => {
   const handleChangeDisplay = () => {
     changeDisplay(!adventageDisplay);
   };
+  useEffect(() => {
+    setTimeout(() => {
+      changeDisplay(true);
+    }, 1000);
+  }, []);
   return (
     <>
       {position === "right" && (
