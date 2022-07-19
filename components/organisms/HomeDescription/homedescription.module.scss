@@ -1,3 +1,4 @@
+@import "../../../styles/colors.scss";
 .homeDescription {
   margin-right: 160px;
   display: flex;
@@ -15,7 +16,7 @@
     }
     :first-child {
       border-right: 1px solid #b9b8ab;
-      color: #00b302;
+      color: $green;
       font-weight: 600;
     }
     :last-child {
@@ -44,7 +45,7 @@
       color: #001d01;
     }
     .headTitleLightGreen {
-      color: #00b302;
+      color: $green;
     }
   }
 }

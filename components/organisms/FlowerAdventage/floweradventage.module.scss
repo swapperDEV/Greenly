@@ -1,9 +1,10 @@
+@import "../../../styles/colors.scss";
 .adventageRight {
   position: absolute;
   right: 0%;
   transform: translateX(50%);
   svg {
-    background-color: #00b302;
+    background-color: $green;
     color: white;
     padding: 5px;
     font-size: 2rem;
@@ -26,7 +27,7 @@
     }
   }
   svg {
-    background-color: #00b302;
+    background-color: $green;
     color: white;
     padding: 5px;
     font-size: 2rem;
@@ -43,7 +44,7 @@
   bottom: 0%;
   transform: translate(100%, 50%);
   svg {
-    background-color: #00b302;
+    background-color: $green;
     color: white;
     padding: 5px;
     font-size: 2rem;

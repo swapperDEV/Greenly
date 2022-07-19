@@ -1,3 +1,4 @@
+@import "../../../styles/colors.scss";
 .header {
   font-size: 2.8rem;
   font-weight: 700;
@@ -5,13 +6,13 @@
   transition: 0.3s ease;
   margin-right: 80px;
   a {
-    color: #00b302;
+    color: $green;
   }
 }
 .header:hover {
   cursor: pointer;
   transform: scale(1.1);
-  color: #00b302;
+  color: $green;
   a {
     color: #001d01;
   }

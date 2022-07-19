@@ -1,5 +1,106 @@
+@import "../../../styles/colors.scss";
 .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-grow: 1;
+  width: 60vw;
+  position: relative;
+  overflow: visible;
+  .imageLeft {
+    background-color: $wheat;
+    animation: imageLeftXL 2s ease forwards;
+    position: absolute;
+    width: 150px;
+    overflow: visible;
+    padding-top: 2px;
+    top: 0%;
+    overflow: hidden;
+    z-index: 3;
+  }
+  .imageRight {
+    background-color: $wheat;
+    overflow: visible;
+    animation: imageRightXL 2s ease forwards;
+    top: 0%;
+    width: 150px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+  }
+  .description {
+    display: flex;
+    height: 400px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 0;
+    position: relative;
+    animation: text 2s ease;
+  }
+}
+
+@keyframes imageRightXL {
+  0% {
+    right: calc(50% - 20%);
+  }
+  100% {
+    right: 100px;
+  }
+}
+
+@keyframes imageLeftXL {
+  0% {
+    left: calc(50% - 20%);
+  }
+  100% {
+    left: 100px;
+  }
+}
+@keyframes imageRightL {
+  0% {
+    right: calc(50% - 20%);
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes imageLeftL {
+  0% {
+    left: calc(50% - 20%);
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1500px) {
+  .wrapper {
+    .imageLeft {
+      animation: imageLeftL 2s ease forwards;
+    }
+    .imageRight {
+      animation: imageRightL 2s ease forwards;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .wrapper {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    width: 100vw;
+  }
 }

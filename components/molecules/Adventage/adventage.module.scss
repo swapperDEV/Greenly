@@ -1,3 +1,4 @@
+@import "../../../styles/colors.scss";
 .pro {
   -webkit-box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
   -moz-box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
@@ -19,7 +20,7 @@
   margin-top: 0px;
   svg {
     margin-right: 15px;
-    color: #fe4b24;
+    color: $orange;
     border-radius: 50px;
     background-color: #ffefe7;
   }

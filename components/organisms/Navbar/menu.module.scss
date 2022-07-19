@@ -1,3 +1,4 @@
+@import "../../../styles/colors.scss";
 .wrapper {
   min-height: 80px;
   top: 0%;
@@ -22,6 +23,6 @@
 }
 
 .wrapperFixed {
-  background-color: #f5f3e6;
+  background-color: $wheat;
   opacity: 0.9;
 }

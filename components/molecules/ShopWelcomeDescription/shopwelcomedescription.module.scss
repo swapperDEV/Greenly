@@ -1,0 +1,12 @@
+@import "../../../styles/colors.scss";
+.headText {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  i {
+    color: $lightOrange;
+  }
+  a {
+    color: $lightOrange;
+  }
+}
