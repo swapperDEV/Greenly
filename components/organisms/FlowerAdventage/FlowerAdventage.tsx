@@ -14,7 +14,7 @@ export const FlowerAdventage = ({ position }: { position: string }) => {
   useEffect(() => {
     setTimeout(() => {
       changeDisplay(true);
-    }, 1000);
+    }, 500);
   }, []);
   return (
     <>

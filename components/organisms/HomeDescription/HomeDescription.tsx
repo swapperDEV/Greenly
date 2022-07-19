@@ -11,11 +11,10 @@ export const HomeDescription = () => {
       <div className={styles.homeDescription}>
         <div>
           <p className={styles.headTitle}>
-            Can you help <br />
-            us
+            Can you help us <br />
             <a className={styles.headTitleGreen}> Greenly</a>
-            <a className={styles.headTitleLightGreen}>.</a>
-            <br /> a world?{" "}
+            <a className={styles.headTitleLightGreen}>. </a>
+            the world?{" "}
             <a className={styles.flower}>
               <Image src={flower} />
             </a>
@@ -29,7 +28,11 @@ export const HomeDescription = () => {
           </div>
         </div>
         <div className={styles.buy}>
-          <OrangeButton text={"Shop with us"} icon={<FaShopify />} />
+          <OrangeButton
+            text={"Shop with us"}
+            icon={<FaShopify />}
+            direct="/shop"
+          />
         </div>
       </div>
     </>
