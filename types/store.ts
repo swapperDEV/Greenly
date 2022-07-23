@@ -1,6 +1,11 @@
+export type ProductType = {
+  type: string;
+  name: string;
+  price: string;
+};
 export interface IStore {
   products: {
-    productsList: {};
+    productsList: Array<ProductType>;
   };
   firebase: {
     app: {};
