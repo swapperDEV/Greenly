@@ -7,10 +7,10 @@ export const PlantCategory = ({
   return (
     <>
       <div>
-        <p>Categories</p>
+        <label>Categories</label>
         <ul>
-          {categories.map((category) => {
-            return <li>{category}</li>;
+          {categories.map((category, index) => {
+            return <li key={index}>{category}</li>;
           })}
         </ul>
       </div>

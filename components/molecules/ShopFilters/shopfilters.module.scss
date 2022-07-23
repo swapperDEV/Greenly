@@ -1,0 +1,26 @@
+.wrapper {
+  -webkit-box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
+  box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
+  background-color: #f7f5ee;
+  padding: 15px;
+  border-radius: 10px;
+  label {
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  ul {
+    margin-bottom: 35px;
+    padding-left: 20px;
+    li {
+      display: flex;
+      list-style-type: none;
+      transition: 0.1s ease;
+      margin-top: 8px;
+    }
+    li:hover {
+      cursor: pointer;
+      color: #00b302;
+    }
+  }
+}

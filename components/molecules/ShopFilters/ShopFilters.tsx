@@ -1,7 +1,8 @@
 import React from "react";
 import { PlantCategory } from "../../atoms/PlantCategory/PlantCategory";
 import { PlantSize } from "../../atoms/PlantSize/PlantSize";
-import { PriceRange } from "../../atoms/PriceRange/PriceRange";
+import { RangeSlider } from "../../atoms/RangeSlider/RangeSlider";
+import styles from "./shopfilters.module.scss";
 export const ShopFilters = () => {
   const categories = [
     "Seeds",
@@ -14,9 +15,9 @@ export const ShopFilters = () => {
   ];
   const size = ["Small", "Medium", "Large"];
   return (
-    <div>
+    <div className={styles.wrapper}>
       <PlantCategory categories={categories} />
-      <PriceRange />
+      <RangeSlider />
       <PlantSize size={size} />
     </div>
   );

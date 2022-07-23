@@ -14,8 +14,8 @@ export const NavbarList = () => {
   return (
     <>
       <ul className={styles.subpageList}>
-        {subpagesList.map((n: { name: string; link: string }) => (
-          <NavbarListButton name={n.name} link={n.link} />
+        {subpagesList.map((n: { name: string; link: string }, index) => (
+          <NavbarListButton name={n.name} link={n.link} key={index} />
         ))}
       </ul>
       <div className={styles.icons}>

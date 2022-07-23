@@ -1,4 +1,5 @@
 import React from "react";
+import { GreenButton } from "../../atoms/Buttons/GreenButton/GreenButton";
 import { OrangeButton } from "../../atoms/Buttons/OrangeButton/OrangeButton";
 import styles from "./shopwelcomedescription.module.scss";
 export const ShopWelcomeDescription = () => {
@@ -9,7 +10,7 @@ export const ShopWelcomeDescription = () => {
         <br />
         Of you.
       </h1>
-      <OrangeButton text="Shop Now" />
+      <GreenButton text={"Shop now"} />
     </>
   );
 };

@@ -2,10 +2,10 @@ import React from "react";
 export const PlantSize = ({ size }: { size: Array<string> }) => {
   return (
     <>
-      <p>Size</p>
+      <label>Size</label>
       <ul>
-        {size.map((size) => {
-          return <li>{size}</li>;
+        {size.map((size, index) => {
+          return <li key={index}>{size}</li>;
         })}
       </ul>
     </>
