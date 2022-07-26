@@ -1,10 +1,15 @@
 .wrapper {
-  -webkit-box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
-  -moz-box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
-  box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
-  background-color: #f7f5ee;
-  padding: 15px;
   border-radius: 10px;
+  min-width: 200px;
+  .sideFilters {
+    background-color: #f7f5ee;
+    -webkit-box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
+    box-shadow: 10px 14px 30px -28px rgba(66, 68, 90, 1);
+    padding: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
   label {
     font-weight: 500;
     font-size: 1.1rem;

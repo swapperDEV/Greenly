@@ -8,17 +8,37 @@ import styles from "./shop.module.scss";
 export const Shop = () => {
   const { productsList, sortedProductsList } = useProducts();
   const [displayedCategory, changeDisplayedCategory] = useState("all");
-  console.log(productsList, sortedProductsList);
+  const [displayedSize, changeDisplayedSize] = useState("all");
+  const [priceRange, updatePriceRange] = useState([0, 0]);
+  const [maxNumber, updateMaxNumber] = useState(100);
+  const updateValue = (value: Array<number>) => {
+    updatePriceRange(value);
+  };
   return (
     <div className={styles.wrapper}>
-      <ShopFilters />
+      <ShopFilters
+        sortedProductsList={sortedProductsList}
+        changeDisplayedCategory={changeDisplayedCategory}
+        changeDisplayedSize={changeDisplayedSize}
+        category={displayedCategory}
+        displayedSize={displayedSize}
+        maxNumber={maxNumber}
+        updateValue={updateValue}
+      />
       <div className={styles.products}>
-        <ShopSort />
-        <ShopProducts
-          category={displayedCategory}
-          products={productsList}
-          sortedProducts={sortedProductsList}
-        />
+        {productsList && (
+          <>
+            <ShopSort />
+            <ShopProducts
+              size={displayedSize}
+              category={displayedCategory}
+              priceRange={priceRange}
+              products={productsList}
+              sortedProducts={sortedProductsList}
+              updateMaxNumber={updateMaxNumber}
+            />
+          </>
+        )}
       </div>
     </div>
   );

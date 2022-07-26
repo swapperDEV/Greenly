@@ -6,4 +6,7 @@ export interface IShopProductsProps {
   category: string;
   products: Array<ProductType>;
   sortedProducts: SortedArray;
+  size: string;
+  priceRange: Array<number>;
+  updateMaxNumber: Function;
 }

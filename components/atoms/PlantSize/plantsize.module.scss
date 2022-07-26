@@ -1,0 +1,16 @@
+@import "../../../styles/colors.scss";
+.active {
+  color: $green;
+  transition: 0.1s ease;
+  p {
+    transition: 0.1s ease;
+    border-bottom: 1px solid $green;
+  }
+}
+.unactive {
+  transition: 0.1s ease;
+  p {
+    transition: 0.1s ease;
+    border-bottom: 1px solid white;
+  }
+}
