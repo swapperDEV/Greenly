@@ -6,9 +6,11 @@ import { ShopSort } from "../../molecules/ShopSort/ShopSort";
 import styles from "./shop.module.scss";
 
 export const Shop = () => {
-  const { productsList, sortedProductsList } = useProducts();
+  const { productsList, sortedProductsList, sales } = useProducts();
   const [displayedCategory, changeDisplayedCategory] = useState("all");
   const [displayedSize, changeDisplayedSize] = useState("all");
+  const [priceCategory, changePriceCategory] = useState("all");
+  const [sorting, changeSorting] = useState("default");
   const [priceRange, updatePriceRange] = useState([0, 0]);
   const [maxNumber, updateMaxNumber] = useState(100);
   const updateValue = (value: Array<number>) => {
@@ -28,14 +30,23 @@ export const Shop = () => {
       <div className={styles.products}>
         {productsList && (
           <>
-            <ShopSort />
+            <ShopSort
+              changePriceCategory={changePriceCategory}
+              priceCategory={priceCategory}
+              changeSorting={changeSorting}
+              displayedSize={displayedSize}
+              displayedCategory={displayedCategory}
+              priceRange={priceRange}
+            />
             <ShopProducts
+              sorting={sorting}
               size={displayedSize}
               category={displayedCategory}
+              priceCategory={priceCategory}
               priceRange={priceRange}
               products={productsList}
-              sortedProducts={sortedProductsList}
               updateMaxNumber={updateMaxNumber}
+              salesProducts={sales}
             />
           </>
         )}

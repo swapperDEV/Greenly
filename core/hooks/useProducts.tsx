@@ -4,6 +4,7 @@ import { IStore, ProductType } from "../../types/store";
 import { SortedArray } from "../../types/shop";
 export const useProducts = () => {
   const { productsList } = useSelector((state: IStore) => state.products);
+  const { sales } = useSelector((state: IStore) => state.products);
   const [sortedProductsList, changeSortedProducts] = useState<SortedArray>([]);
   useEffect(() => {
     const sortedArray: SortedArray = [];
@@ -27,5 +28,6 @@ export const useProducts = () => {
   return {
     productsList,
     sortedProductsList,
+    sales,
   };
 };

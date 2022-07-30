@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { downloadProducts as downloadProductsReducer } from "../../store/products";
+import {
+  downloadProducts as downloadProductsReducer,
+  downloadSales as downloadSalesReducer,
+} from "../../store/products";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
-import { IStore } from "../../types/store";
+import { IStore, ProductType } from "../../types/store";
 
 const getProducts = async () => {
   const db = getFirestore();
@@ -14,8 +17,8 @@ const getProducts = async () => {
   return table;
 };
 
-export const FirebaseProvider = ({ children }: { children: JSX.Element }) => {
-  const { app, db } = useSelector((state: IStore) => state.firebase);
+export const ProductsProvider = ({ children }: { children: JSX.Element }) => {
+  const { productsList } = useSelector((state: IStore) => state.products);
   const dispatch = useDispatch();
   const downloadProducts = async () => {
     getProducts().then((value) => {
@@ -25,5 +28,17 @@ export const FirebaseProvider = ({ children }: { children: JSX.Element }) => {
   useEffect(() => {
     downloadProducts();
   }, []);
+  useEffect(() => {
+    if (productsList.length > 0) {
+      const list = productsList;
+      const saleList: Array<ProductType> = [];
+      list.map((product) => {
+        if (product.sale) {
+          saleList.push(product);
+        }
+      });
+      dispatch(downloadSalesReducer(saleList));
+    }
+  }, [productsList]);
   return <>{children}</>;
 };

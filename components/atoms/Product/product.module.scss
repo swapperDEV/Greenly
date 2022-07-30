@@ -1,4 +1,54 @@
 @import "../../../styles/colors.scss";
+.productsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+.pagination {
+  width: 100%;
+  ul {
+    margin-top: 50px;
+    padding-left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    li {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    :last-child {
+      margin-left: 15px;
+    }
+    :first-child {
+      margin-right: 15px;
+    }
+    li {
+      transition: 0.3s ease;
+      a {
+        background-color: $orange;
+        color: white;
+        border-radius: 10px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        transition: 0.3s ease;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+  li:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .activePage {
+    a {
+      background-color: $green;
+    }
+  }
+}
 .product {
   width: 150px;
   text-align: left;
@@ -29,6 +79,18 @@
   }
   .name {
     margin-top: 5px;
+  }
+  .prices {
+    display: flex;
+    .price {
+      margin-left: 5px;
+    }
+  }
+  .oldPrice {
+    color: $orange;
+    text-decoration: line-through;
+    font-weight: 200;
+    text-align: left;
   }
   .price {
     color: $green;

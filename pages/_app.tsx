@@ -1,15 +1,15 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { FirebaseProvider } from "../components/providers/FirebaseProvider";
 import { Provider } from "react-redux";
 import store from "../store/store";
+import { ProductsProvider } from "../components/providers/ProductsProvider";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <FirebaseProvider>
+      <ProductsProvider>
         <Component {...pageProps} />
-      </FirebaseProvider>
+      </ProductsProvider>
     </Provider>
   );
 }

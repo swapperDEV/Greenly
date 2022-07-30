@@ -6,15 +6,14 @@ export const firebaseSlice = createSlice({
   name: "firebase",
   initialState: {
     app: initializeApp(firebaseConfig),
-    db: getFirestore(),
   },
   reducers: {
-    updateDb: (state) => {
-      state.db = getFirestore();
+    updateApp: (state) => {
+      state.app = initializeApp(firebaseConfig);
     },
   },
 });
 
-export const { updateDb } = firebaseSlice.actions;
+export const { updateApp } = firebaseSlice.actions;
 
 export default firebaseSlice.reducer;

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./footerplant.module.scss";
-import { StaticImageData } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 export const FooterPlant = ({
   title,
   src,
@@ -15,7 +15,7 @@ export const FooterPlant = ({
         <Image src={src} width={"50px"} height={"90px"} />
         <div className={styles.plantDescription}>
           <p>{title}</p>
-          <a>Shop now +</a>
+          <Link href="/shop">Shop now +</Link>
         </div>
       </div>
     </>

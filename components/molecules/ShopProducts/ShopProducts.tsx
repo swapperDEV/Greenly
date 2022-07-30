@@ -1,24 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { IShopProductsProps, SortedArray } from "../../../types/shop";
+import { priceSort } from "../../../core/helpers/priceSort";
+import { IShopProductsProps } from "../../../types/shop";
 import { ProductType } from "../../../types/store";
-import { Product } from "../../atoms/Product/Product";
+import { ProductPagination } from "../../atoms/Product/Product";
 import styles from "./shopproducts.module.scss";
 
 export const ShopProducts = ({
   category,
   products,
-  sortedProducts,
+  priceCategory,
   priceRange,
+  sorting,
+  salesProducts,
   size,
   updateMaxNumber,
 }: IShopProductsProps) => {
   const [validateProducts, setValidateProducts] =
     useState<Array<ProductType>>(products);
+  const [sortedProducts, setSortedProducts] =
+    useState<Array<ProductType>>(products);
   const [withoutPriceProducts, setWithoutPriceProducts] =
     useState<Array<ProductType>>(products);
   const productValidation = () => {
-    let productsList = products;
-    console.log(products, " 2");
+    let productsList = [];
+    if (priceCategory === "sale") {
+      productsList = salesProducts;
+    } else {
+      productsList = products;
+    }
     if (category !== "all") {
       let newSortedProducts = productsList.filter(
         (product) => product.type === category
@@ -44,9 +53,8 @@ export const ShopProducts = ({
     setValidateProducts(productsList);
   };
   useEffect(() => {
-    console.log(products, size, category);
     productValidation();
-  }, [category, size, products, priceRange]);
+  }, [category, size, products, priceRange, salesProducts, priceCategory]);
   useEffect(() => {
     let max = 0;
     withoutPriceProducts.map((product) => {
@@ -57,11 +65,22 @@ export const ShopProducts = ({
     });
     updateMaxNumber(max);
   }, [withoutPriceProducts]);
+
+  useEffect(() => {
+    if (sorting.toLowerCase() === "price") {
+      setSortedProducts(validateProducts.sort(priceSort));
+    } else {
+      setSortedProducts([]);
+      productValidation();
+    }
+  }, [sorting]);
   return (
-    <div className={styles.productsList}>
-      {validateProducts.map((product, index) => {
-        return <Product key={product.name} product={product} />;
-      })}
-    </div>
+    <>
+      {priceCategory === "sale" ? (
+        <>{products && <ProductPagination products={validateProducts} />}</>
+      ) : (
+        <>{products && <ProductPagination products={validateProducts} />}</>
+      )}
+    </>
   );
 };

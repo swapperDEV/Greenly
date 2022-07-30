@@ -1,9 +1,10 @@
-import React, { StaticImageData } from "react";
+import React from "react";
 import styles from "./footerplants.module.scss";
 import smallPlant from "../../../assets/plant1.png";
 import mediumPlant from "../../../assets/plant3.png";
 import largePlant from "../../../assets/plant2.png";
 import { FooterPlant } from "../../atoms/FooterPlant/FooterPlant";
+import { StaticImageData } from "next/image";
 export const FooterPlants = () => {
   const plantsList = [
     { title: "Small Plant", src: smallPlant },
@@ -15,7 +16,7 @@ export const FooterPlants = () => {
       <div className={styles.footerPlants}>
         {plantsList.map(
           ({ title, src }: { title: string; src: StaticImageData }) => {
-            return <FooterPlant title={title} src={src} />;
+            return <FooterPlant key={title} title={title} src={src} />;
           }
         )}
       </div>
