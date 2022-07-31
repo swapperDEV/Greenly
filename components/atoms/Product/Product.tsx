@@ -3,6 +3,7 @@ import { ProductType } from "../../../types/store";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import { Circles } from "react-loader-spinner";
 import { FaShoppingBasket } from "@react-icons/all-files/fa/FaShoppingBasket";
+import { FaCheck } from "@react-icons/all-files/fa/FaCheck";
 import styles from "./product.module.scss";
 import { updateCart } from "../../../store/cart";
 import { useDispatch } from "react-redux";
@@ -11,11 +12,16 @@ const Product = ({ product }: { product: ProductType }) => {
   const dispatch = useDispatch();
   const storage = getStorage();
   const [imgSrc, setImgSrc] = useState<string>("");
+  const [added, productAdded] = useState(false);
   getDownloadURL(ref(storage, `${product.name}.PNG`)).then((url) => {
     setImgSrc(url);
   });
   const addProductToCart = () => {
-    dispatch(updateCart(product));
+    dispatch(updateCart({ ...product, quantity: 0 }));
+    productAdded(true);
+    setTimeout(() => {
+      productAdded(false);
+    }, 2000);
   };
   return (
     <div className={styles.product}>
@@ -37,7 +43,14 @@ const Product = ({ product }: { product: ProductType }) => {
               )}
             </div>
             <div className={styles.addIcon}>
-              <FaShoppingBasket onClick={() => addProductToCart()} />
+              {added ? (
+                <FaCheck />
+              ) : (
+                <FaShoppingBasket
+                  className={styles.basket}
+                  onClick={() => addProductToCart()}
+                />
+              )}
             </div>
           </div>
         </>

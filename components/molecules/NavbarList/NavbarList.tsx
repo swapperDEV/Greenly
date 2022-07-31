@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./navbarlist.module.scss";
 import { FaShoppingCart } from "@react-icons/all-files/fa/FaShoppingCart";
 import { NavbarListButton } from "../../atoms/NavbarListButton/NavbarListButton";
@@ -9,8 +9,9 @@ import { IStore } from "../../../types/store";
 import { unWiggle } from "../../../store/cart";
 
 export const NavbarList = () => {
-  const { basketWiggle } = useSelector((state: IStore) => state.cart);
+  const { basketWiggle, cart } = useSelector((state: IStore) => state.cart);
   const dispatch = useDispatch();
+  const [cartCount, changeCartCount] = useState(0);
   const subpagesList = [
     { name: "Home", link: "home" },
     { name: "Shop", link: "shop" },
@@ -21,9 +22,20 @@ export const NavbarList = () => {
     if (basketWiggle === true) {
       setTimeout(() => {
         dispatch(unWiggle());
-      }, 2000);
+      }, 3000);
     }
   }, [basketWiggle]);
+  useEffect(() => {
+    let count = 0;
+    cart.map((product) => {
+      if (product.quantity) {
+        count += product.quantity;
+      } else {
+        count++;
+      }
+    });
+    changeCartCount(count);
+  }, [cart]);
   return (
     <>
       <ul className={styles.subpageList}>
@@ -33,7 +45,12 @@ export const NavbarList = () => {
       </ul>
       <div className={styles.icons}>
         <Link href="/cart">
-          <FaShoppingCart />
+          <div className={cart.length > 0 ? styles.basket : styles.basketFill}>
+            <FaShoppingCart
+              className={basketWiggle ? styles.wiggle : styles.null}
+            />
+            {cart.length > 0 && <p className={styles.count}>{cartCount}</p>}
+          </div>
         </Link>
       </div>
       <GreenButton text={"Login"} />

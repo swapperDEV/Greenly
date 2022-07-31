@@ -4,6 +4,7 @@ export type ProductType = {
   price: string;
   size?: string;
   sale?: number;
+  quantity?: number;
 };
 export interface IStore {
   products: {

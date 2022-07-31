@@ -1,3 +1,4 @@
+@import "../../../styles/colors.scss";
 .subpageList {
   display: flex;
   justify-content: center;
@@ -21,7 +22,9 @@
 .icons {
   margin-right: 15px;
   margin-left: 20px;
+  position: relative;
   svg {
+    z-index: 2;
     font-size: 1.5rem;
     margin-left: 5px;
     transition: 0.1s ease;
@@ -31,5 +34,58 @@
   svg:hover {
     transform: scale(1.1);
     cursor: pointer;
+  }
+}
+
+.basket {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  align-items: center;
+  background-color: $green;
+  border-radius: 18px;
+  padding: 8px;
+  font-size: 1rem !important;
+  border: 1px solid transparent;
+  svg {
+    margin-left: 10px;
+    color: white;
+  }
+}
+
+.basket:hover {
+  cursor: pointer;
+  background-color: #016402;
+  border: 1px solid #016402;
+}
+
+.count {
+  color: white;
+  margin-left: 5px;
+
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.wiggle {
+  animation: wiggle 1.2s ease 2;
+  overflow: visible;
+}
+
+@keyframes wiggle {
+  10% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-45deg) scale(1.1);
+  }
+  90% {
+    transform: rotate(0deg) scale(1);
   }
 }

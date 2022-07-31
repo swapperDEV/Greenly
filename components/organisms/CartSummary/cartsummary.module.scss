@@ -1,0 +1,10 @@
+.wrapper {
+  margin-left: 40px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  .summaryHead {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+}

@@ -79,6 +79,7 @@
       flex-grow: 1;
       display: flex;
       justify-content: flex-end;
+      align-items: flex-start;
       color: $orange;
       margin-left: 5px;
       svg {
@@ -86,7 +87,7 @@
       }
     }
     .addIcon:hover {
-      svg {
+      .basket {
         cursor: pointer;
         transform: scale(1.5) rotate(45deg);
       }
