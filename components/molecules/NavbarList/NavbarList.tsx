@@ -1,16 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./navbarlist.module.scss";
-import { FaSearch } from "@react-icons/all-files/fa/FaSearch";
 import { FaShoppingCart } from "@react-icons/all-files/fa/FaShoppingCart";
 import { NavbarListButton } from "../../atoms/NavbarListButton/NavbarListButton";
 import { GreenButton } from "../../atoms/Buttons/GreenButton/GreenButton";
+import Link from "next/link";
+import { useSelector, useDispatch } from "react-redux";
+import { IStore } from "../../../types/store";
+import { unWiggle } from "../../../store/cart";
+
 export const NavbarList = () => {
+  const { basketWiggle } = useSelector((state: IStore) => state.cart);
+  const dispatch = useDispatch();
   const subpagesList = [
     { name: "Home", link: "home" },
     { name: "Shop", link: "shop" },
-    { name: "About us", link: "about" },
+    { name: "Check Plant", link: "check" },
     { name: "Your Orders", link: "orders" },
   ];
+  useEffect(() => {
+    if (basketWiggle === true) {
+      setTimeout(() => {
+        dispatch(unWiggle());
+      }, 2000);
+    }
+  }, [basketWiggle]);
   return (
     <>
       <ul className={styles.subpageList}>
@@ -19,8 +32,9 @@ export const NavbarList = () => {
         ))}
       </ul>
       <div className={styles.icons}>
-        <FaSearch />
-        <FaShoppingCart />
+        <Link href="/cart">
+          <FaShoppingCart />
+        </Link>
       </div>
       <GreenButton text={"Login"} />
     </>

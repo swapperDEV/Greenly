@@ -10,6 +10,10 @@ export interface IStore {
     productsList: Array<ProductType>;
     sales: Array<ProductType>;
   };
+  cart: {
+    cart: Array<ProductType>;
+    basketWiggle: boolean;
+  };
   firebase: {
     app: {};
     db: {};
