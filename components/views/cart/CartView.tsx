@@ -11,7 +11,7 @@ export const CartView = () => {
     <MotionProvider>
       <div className={styles.wrapper}>
         <CartProducts products={cart} />
-        <CartSummary />
+        <CartSummary products={cart} />
       </div>
     </MotionProvider>
   );
