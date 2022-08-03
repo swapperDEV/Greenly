@@ -1,0 +1,38 @@
+.promocode {
+  border: 1px solid black;
+  min-height: 15px;
+  display: flex;
+  padding: 7px;
+  width: 300px;
+  border-radius: 5px;
+  font-size: 1rem;
+  input {
+    background-color: transparent;
+    border: 0px solid white;
+    border-bottom: 1px solid black;
+    flex-grow: 1;
+    outline: none;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  :last-child {
+    padding-left: 10px;
+    padding-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.info {
+  text-align: right;
+  margin-top: 4px;
+  a {
+    cursor: pointer;
+  }
+}
+.promoStatus {
+  cursor: pointer;
+}

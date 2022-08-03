@@ -1,9 +1,17 @@
 import React from "react";
 import styles from "./button.module.scss";
-export const GreenButton = ({ text }: { text: string }) => {
+export const GreenButton = ({
+  text,
+  onClick,
+}: {
+  text: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+}) => {
   return (
     <>
-      <button className={styles.btn}>{text}</button>
+      <button className={styles.btn} onClick={onClick && onClick}>
+        {text}
+      </button>
     </>
   );
 };

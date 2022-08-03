@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { ProductType } from "../../../types/store";
 import { CartProduct } from "../../molecules/CartProduct/CartProduct";
@@ -9,7 +10,9 @@ export const CartProducts = ({
 }) => {
   return (
     <div className={styles.wrapper}>
-      <p className={styles.bag}>Your Bag 🛒</p>
+      <p className={products.length > 0 ? styles.bag : styles.bagOff}>
+        Your Bag 🛒
+      </p>
       {products.length > 0 ? (
         <div>
           {products.map((product) => {
@@ -17,7 +20,12 @@ export const CartProducts = ({
           })}
         </div>
       ) : (
-        <p>There are no items in your bag.</p>
+        <>
+          <p>There are no items in your bag.</p>
+          <div className={styles.addItems}>
+            <Link href="/shop">Add items</Link>
+          </div>
+        </>
       )}
     </div>
   );

@@ -1,6 +1,25 @@
+@import "../../../styles/colors.scss";
 .wrapper {
   margin-right: 40px;
   .bag {
     font-size: 1.8rem;
+  }
+  .bagOff {
+    font-size: 1.8rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.addItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    cursor: pointer;
+    color: $green;
+    border-bottom: $green 1px solid;
   }
 }
