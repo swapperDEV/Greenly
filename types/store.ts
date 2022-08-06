@@ -13,6 +13,7 @@ export interface IStore {
   };
   cart: {
     cart: Array<ProductType>;
+    checkout: CheckoutType;
     basketWiggle: boolean;
   };
   firebase: {
@@ -20,3 +21,17 @@ export interface IStore {
     db: {};
   };
 }
+
+export interface ICartState {
+  cart: Array<ProductType>;
+  checkout: CheckoutType;
+  basketWiggle: boolean;
+}
+
+export type CheckoutType = {
+  products?: Array<ProductType>;
+  total?: number;
+  subtotal?: number;
+  delivery?: number;
+  discount?: number;
+};

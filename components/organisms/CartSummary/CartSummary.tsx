@@ -5,13 +5,26 @@ import { GreenButton } from "../../atoms/Buttons/GreenButton/GreenButton";
 import styles from "./cartsummary.module.scss";
 import { ProductType } from "../../../types/store";
 import { PromoCode } from "../../molecules/PromoCode/PromoCode";
+import { useDispatch } from "react-redux";
+import { checkoutProducts } from "../../../store/cart";
+
 export const CartSummary = ({ products }: { products: Array<ProductType> }) => {
   const [subtotal, setSubtotal] = useState(0);
   const [discount, setDiscount] = useState(0);
   const [delivery, setDelivery] = useState(5);
   const [total, setTotal] = useState(0);
+  const dispatch = useDispatch();
   const checkout = () => {
-    //pushing to redux
+    dispatch(
+      checkoutProducts({
+        products: products,
+        total: total,
+        subtotal: subtotal,
+        delivery: delivery,
+        discount: discount,
+      })
+    );
+    Router.push("/checkout");
   };
   useEffect(() => {
     let total = 0;

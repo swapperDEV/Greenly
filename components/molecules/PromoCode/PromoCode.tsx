@@ -5,6 +5,7 @@ export const PromoCode = ({ setDiscount }: { setDiscount: Function }) => {
   const [promoValidate, changePromoValidate] = useState("");
   const [promoStatus, changePromoStatus] = useState("?");
   const [promo, changePromo] = useState(0);
+  const [promoAdded, changePromoAdded] = useState("");
   const db = getFirestore();
   const checkPromoCode = async (promocode: string) => {
     let promo = promocode;
@@ -32,9 +33,14 @@ export const PromoCode = ({ setDiscount }: { setDiscount: Function }) => {
     } else if (promoStatus === "👍") {
       setDiscount(promo);
       changePromo(0);
+      changePromoAdded(promoValidate);
       changePromoStatus("?");
       changePromoValidate("");
     }
+  };
+  const promoRemove = () => {
+    setDiscount(0);
+    changePromoAdded("");
   };
   const handlePushCode = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
@@ -57,6 +63,12 @@ export const PromoCode = ({ setDiscount }: { setDiscount: Function }) => {
       {promoStatus === "👍" && (
         <p className={styles.info}>
           <a onClick={codeActivate}>click</a> to activate code
+        </p>
+      )}
+      {promoAdded.length > 0 && (
+        <p className={styles.info}>
+          <a onClick={promoRemove}>Remove</a> discount -{" "}
+          {promoAdded.toUpperCase()}
         </p>
       )}
     </>

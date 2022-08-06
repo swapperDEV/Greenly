@@ -1,13 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { ProductType } from "../types/store";
-
-interface ICartState {
-  cart: Array<ProductType>;
-  basketWiggle: boolean;
-}
+import { ProductType, ICartState, CheckoutType } from "../types/store";
 
 const initialState: ICartState = {
   cart: [],
+  checkout: {},
   basketWiggle: false,
 };
 
@@ -55,10 +51,22 @@ export const cartSlice = createSlice({
     unWiggle: (state) => {
       state.basketWiggle = false;
     },
+    checkoutProducts: (state, action: { payload: CheckoutType }) => {
+      state.checkout = action.payload;
+    },
+    removeCheckoutProducts: (state) => {
+      state.checkout = {};
+    },
   },
 });
 
-export const { updateCart, unWiggle, reduceQuantity, removeFromCart } =
-  cartSlice.actions;
+export const {
+  updateCart,
+  unWiggle,
+  reduceQuantity,
+  removeFromCart,
+  checkoutProducts,
+  removeCheckoutProducts,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -3,13 +3,12 @@ import { SiteTemplate } from "../../components/templates/SiteTemplate";
 import { useRouter } from "next/router";
 import Head from "next/head";
 const Checkout: NextPage = () => {
-  //get from redux
   return (
     <>
       <Head>
-        <title>Greenly Shopping Cart</title>
+        <title>Greenly Checkout</title>
       </Head>
-      <></>
+      <SiteTemplate view="checkout"></SiteTemplate>
     </>
   );
 };

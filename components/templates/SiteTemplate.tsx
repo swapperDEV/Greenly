@@ -10,6 +10,7 @@ import { orange } from "@mui/material/colors";
 import { green } from "@mui/material/colors";
 import { ThemeProvider } from "@mui/material";
 import { CartView } from "../views/cart/CartView";
+import { CheckoutView } from "../views/checkout/CheckoutView";
 const theme = createTheme({
   palette: {
     primary: orange,
@@ -26,6 +27,7 @@ export const SiteTemplate = ({ view }: { view: string }) => {
             {view === "home" && <HomeView />}
             {view === "shop" && <ShopView />}
             {view === "cart" && <CartView />}
+            {view === "checkout" && <CheckoutView />}
           </AnimatePresence>
         </div>
         <Footer />
