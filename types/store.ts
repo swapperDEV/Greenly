@@ -1,3 +1,5 @@
+import { Auth, User } from "firebase/auth";
+
 export type ProductType = {
   type: string;
   name: string;
@@ -17,8 +19,9 @@ export interface IStore {
     basketWiggle: boolean;
   };
   firebase: {
-    app: {};
-    db: {};
+    app: {} | any;
+    auth: Auth;
+    user: User;
   };
 }
 

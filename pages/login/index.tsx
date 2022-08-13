@@ -1,17 +1,17 @@
 import type { NextPage } from "next";
 import { SiteTemplate } from "../../components/templates/SiteTemplate";
 import Head from "next/head";
-import { HomeView } from "../../components/views/home/HomeView";
+import { LoginView } from "../../components/views/login/LoginView";
 
-const Home: NextPage = () => {
+const Login: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Greenly Home</title>
+        <title>Greenly Login</title>
       </Head>
-      <SiteTemplate view={<HomeView />} />
+      <SiteTemplate view={<LoginView />} />
     </>
   );
 };
 
-export default Home;
+export default Login;

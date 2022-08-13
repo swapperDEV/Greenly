@@ -16,7 +16,9 @@ export const CartProducts = ({
       {products.length > 0 ? (
         <div>
           {products.map((product) => {
-            return <CartProduct key={product.name} product={product} />;
+            return (
+              <CartProduct edit={true} key={product.name} product={product} />
+            );
           })}
         </div>
       ) : (

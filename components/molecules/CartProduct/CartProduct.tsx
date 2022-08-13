@@ -9,7 +9,13 @@ import {
   removeFromCart,
 } from "../../../store/cart";
 import { useDispatch } from "react-redux";
-export const CartProduct = ({ product }: { product: ProductType }) => {
+export const CartProduct = ({
+  product,
+  edit,
+}: {
+  product: ProductType;
+  edit: boolean;
+}) => {
   const dispatch = useDispatch();
   const [imgSrc, setImgSrc] = useState<string>("");
   const [price, setPrice] = useState<number>(parseInt(product.price));
@@ -33,27 +39,35 @@ export const CartProduct = ({ product }: { product: ProductType }) => {
           Total : $ {product.quantity && price * product.quantity}.00
         </p>
       </div>
-      <div className={styles.quantity}>
-        <button
-          className={styles.btnMinus}
-          onClick={() => dispatch(reduceQuantity(product))}
-        >
-          -
-        </button>
-        <p className={styles.quantityCount}>{product.quantity}</p>
-        <button
-          className={styles.btnPlus}
-          onClick={() => dispatch(updateCart(product))}
-        >
-          +
-        </button>
-      </div>
-      <div
-        onClick={() => dispatch(removeFromCart(product))}
-        className={styles.trash}
-      >
-        <FaTrash />
-      </div>
+      {edit ? (
+        <>
+          <div className={styles.quantity}>
+            <button
+              className={styles.btnMinus}
+              onClick={() => dispatch(reduceQuantity(product))}
+            >
+              -
+            </button>
+            <p className={styles.quantityCount}>{product.quantity}</p>
+            <button
+              className={styles.btnPlus}
+              onClick={() => dispatch(updateCart(product))}
+            >
+              +
+            </button>
+          </div>
+          <div
+            onClick={() => dispatch(removeFromCart(product))}
+            className={styles.trash}
+          >
+            <FaTrash />
+          </div>
+        </>
+      ) : (
+        <div className={styles.quantity}>
+          <p className={styles.quantityCount}>{product.quantity} pieces</p>
+        </div>
+      )}
     </div>
   );
 };

@@ -3,13 +3,16 @@ import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
 import store from "../store/store";
 import { ProductsProvider } from "../components/providers/ProductsProvider";
+import { AuthProvider } from "../components/providers/AuthProvider";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <ProductsProvider>
-        <Component {...pageProps} />
-      </ProductsProvider>
+      <AuthProvider>
+        <ProductsProvider>
+          <Component {...pageProps} />
+        </ProductsProvider>
+      </AuthProvider>
     </Provider>
   );
 }

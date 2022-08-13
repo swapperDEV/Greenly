@@ -7,9 +7,12 @@ import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { IStore } from "../../../types/store";
 import { unWiggle } from "../../../store/cart";
+import Router from "next/router";
+import { signOut } from "firebase/auth";
 
 export const NavbarList = () => {
   const { basketWiggle, cart } = useSelector((state: IStore) => state.cart);
+  const { user, auth } = useSelector((state: IStore) => state.firebase);
   const dispatch = useDispatch();
   const [cartCount, changeCartCount] = useState(0);
   const subpagesList = [
@@ -18,6 +21,10 @@ export const NavbarList = () => {
     { name: "Check Plant", link: "check" },
     { name: "Your Orders", link: "orders" },
   ];
+  const userSignOut = () => {
+    console.log("sign out");
+    auth.signOut();
+  };
   useEffect(() => {
     if (basketWiggle === true) {
       setTimeout(() => {
@@ -53,7 +60,11 @@ export const NavbarList = () => {
           </div>
         </Link>
       </div>
-      <GreenButton text={"Login"} />
+      {user.uid ? (
+        <GreenButton text={"Sign out"} onClick={() => userSignOut()} />
+      ) : (
+        <GreenButton text={"Login"} onClick={() => Router.push("/login")} />
+      )}
     </>
   );
 };

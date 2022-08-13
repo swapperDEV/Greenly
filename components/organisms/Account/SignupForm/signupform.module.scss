@@ -1,0 +1,49 @@
+@import "../../../../styles/colors.scss";
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  h1 {
+    font-weight: 500;
+    margin-bottom: 50px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    input {
+      width: 350px;
+      margin-bottom: 10px;
+      border: 0px solid white;
+      background-color: transparent;
+      outline: none;
+      font-size: 1rem;
+      border: 1px solid $green;
+      padding: 5px;
+      border-radius: 5px;
+      color: rgb(19, 19, 19);
+    }
+    label {
+      margin-bottom: 7px;
+      font-size: 1.2rem;
+    }
+    p {
+      margin-top: 5px;
+      cursor: pointer;
+      a {
+        color: $green;
+      }
+    }
+    button {
+      margin-top: 15px;
+      cursor: pointer;
+      background-color: $green;
+      border: 1px solid $green;
+      color: white;
+      padding-top: 5px;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-radius: 7px;
+    }
+  }
+}
