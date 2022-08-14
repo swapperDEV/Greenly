@@ -2,20 +2,18 @@ import React from "react";
 import styles from "./loginform.module.scss";
 import { Formik } from "formik";
 import Image from "next/image";
-import { useDispatch, useSelector } from "react-redux";
-import { updateUser } from "../../../../store/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import plantGrow from "../../../../assets/growplant2.png";
-import { IStore } from "../../../../types/store";
+import { FirebaseContext } from "../../../../store/firebase-context";
+import { useContext } from "react";
 export const LoginForm = ({ setAction }: { setAction: Function }) => {
-  const { auth } = useSelector((state: IStore) => state.firebase);
-  const dispatch = useDispatch();
+  const FirebaseCtx = useContext(FirebaseContext);
+  const { auth } = FirebaseCtx;
   const userLogin = (values: { email: string; password: string }) => {
     signInWithEmailAndPassword(auth, values.email, values.password)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
-        dispatch(updateUser(userCredential.user));
       })
       .catch((error) => {
         const errorCode = error.code;

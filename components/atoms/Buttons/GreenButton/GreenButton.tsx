@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 import styles from "./button.module.scss";
 export const GreenButton = ({
   text,

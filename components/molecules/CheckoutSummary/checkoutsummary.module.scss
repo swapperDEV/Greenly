@@ -1,0 +1,27 @@
+.summary {
+  .cost {
+    margin-top: 15px;
+    .price {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      p {
+        text-transform: capitalize;
+      }
+      a {
+        flex-grow: 1;
+        text-align: right;
+      }
+    }
+  }
+  .head {
+    display: flex;
+    align-items: center;
+    a {
+      flex-grow: 1;
+      cursor: pointer;
+      text-align: right;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import "../../../styles/colors.scss";
+.wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  .form {
+    margin-top: 5px;
+    div {
+      margin-right: 15px;
+    }
+    .names {
+      margin-bottom: 10px;
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+    }
+    .email {
+      padding-right: 15px;
+    }
+    .address {
+      padding-right: 15px;
+      margin-top: 15px;
+    }
+    .addressCity {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+    }
+  }
+}
+
+.comButton {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  padding-right: 30px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}

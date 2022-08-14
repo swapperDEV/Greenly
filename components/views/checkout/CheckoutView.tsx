@@ -1,23 +1,24 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { MotionProvider } from "../../providers/MotionProvider";
-import styles from "./checkoutview.module.scss";
-import { useSelector } from "react-redux";
-import { IStore, ProductType } from "../../../types/store";
-import products from "../../../store/products";
-import { CartProduct } from "../../molecules/CartProduct/CartProduct";
+import { FirebaseContext } from "../../../store/firebase-context";
+import { CheckoutLogin } from "../../organisms/CheckoutSteps/CheckoutLogin";
+import { CheckoutDelivery } from "../../organisms/CheckoutSteps/CheckoutDelivery";
 export const CheckoutView = () => {
-  const { checkout } = useSelector((state: IStore) => state.cart);
-  console.log(checkout);
-
+  const FirebaseCtx = useContext(FirebaseContext);
+  const { user } = FirebaseCtx;
+  const [step, changeStep] = useState("login");
+  useEffect(() => {
+    if (user) {
+      if (user.uid) {
+        changeStep("delivery");
+      }
+    }
+  }, []);
   return (
     <MotionProvider>
       <>
-        <div className={styles.wrapper}>
-          {checkout.products &&
-            checkout.products.map((product: ProductType, index: number) => {
-              return <CartProduct key={index} edit={false} product={product} />;
-            })}
-        </div>
+        {step === "login" && <CheckoutLogin changeStep={changeStep} />}
+        {step === "delivery" && <CheckoutDelivery />}
       </>
     </MotionProvider>
   );

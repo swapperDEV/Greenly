@@ -1,0 +1,15 @@
+.wrapper {
+  margin-top: 50px;
+  h1 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  .section {
+    padding-top: 20px;
+    margin-right: 35px;
+    margin-left: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,48 @@
+.wrapper {
+  margin-top: 55px;
+  text-align: center;
+  .head {
+    font-weight: 500;
+    font-size: 2rem;
+  }
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    img {
+      background-color: white;
+      border-radius: 50%;
+    }
+  }
+  .checkoutOptions {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .boxLeft {
+      border-right: 0.5px solid lightgray;
+    }
+    .boxRight {
+      border-left: 0.5px solid lightgray;
+    }
+    div {
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      a {
+        font-size: 1rem;
+        margin-bottom: 30px;
+      }
+      button {
+        margin-top: 15px;
+      }
+    }
+  }
+}

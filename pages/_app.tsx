@@ -7,13 +7,13 @@ import { AuthProvider } from "../components/providers/AuthProvider";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
-      <AuthProvider>
+    <AuthProvider>
+      <Provider store={store}>
         <ProductsProvider>
           <Component {...pageProps} />
         </ProductsProvider>
-      </AuthProvider>
-    </Provider>
+      </Provider>
+    </AuthProvider>
   );
 }
 

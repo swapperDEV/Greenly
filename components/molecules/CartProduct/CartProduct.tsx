@@ -64,8 +64,8 @@ export const CartProduct = ({
           </div>
         </>
       ) : (
-        <div className={styles.quantity}>
-          <p className={styles.quantityCount}>{product.quantity} pieces</p>
+        <div className={styles.quantity2}>
+          <p className={styles.quantityCount}>{product.quantity} .pcs</p>
         </div>
       )}
     </div>

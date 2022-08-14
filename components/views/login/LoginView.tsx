@@ -1,25 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./login.module.scss";
 import { MotionProvider } from "../../providers/MotionProvider";
 import { LoginForm } from "../../organisms/Account/LoginForm/LoginForm";
 import { SignupForm } from "../../organisms/Account/SignupForm/SignupForm";
 import { useSelector } from "react-redux";
 import { IStore } from "../../../types/store";
+import { FirebaseContext } from "../../../store/firebase-context";
 export const LoginView = () => {
   const [action, setAction] = useState("login");
-  const { user } = useSelector((state: IStore) => state.firebase);
-  useEffect(() => {
-    console.log(user.uid);
-  }, [user]);
+  const FirebaseCtx = useContext(FirebaseContext);
+  const { currentUser } = FirebaseCtx;
   return (
     <>
-      {user.uid ? (
+      {currentUser && currentUser.uid ? (
         <>
           <p>You are logged</p>
         </>
       ) : (
         <>
-          {" "}
           {action === "login" && (
             <MotionProvider classes={styles.wrapper}>
               <LoginForm setAction={setAction} />
