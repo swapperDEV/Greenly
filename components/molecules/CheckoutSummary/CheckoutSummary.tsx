@@ -1,5 +1,5 @@
 import Router from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { IStore, ProductType } from "../../../types/store";
 import { CartProduct } from "../CartProduct/CartProduct";
@@ -12,6 +12,11 @@ export const CheckoutSummary = () => {
     { name: "subtotal:", price: checkout.subtotal },
     { name: "total:", price: checkout.total },
   ];
+  useEffect(() => {
+    if (!checkout.products) {
+      Router.push("/cart");
+    }
+  }, []);
   return (
     <>
       <div className={styles.summary}>
@@ -23,7 +28,7 @@ export const CheckoutSummary = () => {
             return (
               <div key={index} className={styles.price}>
                 <p>{price.name}</p>
-                <a>{price.price}.00 $</a>
+                <a>$ {price.price}</a>
               </div>
             );
           })}

@@ -41,4 +41,13 @@
   padding-right: 30px;
   justify-content: flex-end;
   align-items: flex-end;
+  flex-direction: column;
+  p {
+    margin-bottom: 12px;
+    margin-right: 15px;
+  }
+}
+.error {
+  color: $orange;
+  font-weight: rgba(165, 0, 0, 0.849);
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./input.module.scss";
 export const Input = ({
   type,
@@ -17,6 +17,11 @@ export const Input = ({
   const activateLabel = () => {
     setLabel(styles.label);
   };
+  useEffect(() => {
+    if (value.length > 0) {
+      setLabel(styles.label);
+    }
+  }, []);
   return (
     <>
       <div className={styles.input}>

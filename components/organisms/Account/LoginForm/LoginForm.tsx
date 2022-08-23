@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./loginform.module.scss";
 import { Formik } from "formik";
 import Image from "next/image";
@@ -9,16 +9,16 @@ import { useContext } from "react";
 export const LoginForm = ({ setAction }: { setAction: Function }) => {
   const FirebaseCtx = useContext(FirebaseContext);
   const { auth } = FirebaseCtx;
+  const [error, setError] = useState<string | null>(null);
+
   const userLogin = (values: { email: string; password: string }) => {
     signInWithEmailAndPassword(auth, values.email, values.password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
+        setError(null);
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorMessage);
+        setError("Something doesn't match");
       });
   };
   return (
@@ -36,7 +36,11 @@ export const LoginForm = ({ setAction }: { setAction: Function }) => {
           ) {
             errors.email = "Invalid email address";
           }
-
+          if (errors.email) {
+            setError(errors.email);
+          } else {
+            setError(null);
+          }
           return errors;
         }}
         onSubmit={(values, { setSubmitting }) => {
@@ -74,6 +78,7 @@ export const LoginForm = ({ setAction }: { setAction: Function }) => {
               onBlur={handleBlur}
               value={values.password}
             />
+            <p className={styles.error}>{typeof error === "string" && error}</p>
             <button type="submit" disabled={isSubmitting}>
               Login
             </button>

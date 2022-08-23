@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DeliveryForm } from "../../atoms/DeliveryForm/DeliveryForm";
 import styles from "./checkoutdetails.module.scss";
 import { FaHome } from "@react-icons/all-files/fa/FaHome";
@@ -9,11 +9,13 @@ export const CheckoutDetails = () => {
   const [step, changeStep] = useState("address");
   const [address, setAddress] = useState(null);
   const redirectToPayment = (values: any) => {
-    console.log(values);
+    setAddress(values);
+  };
+  useEffect(() => {
     if (address !== null) {
       changeStep("payment");
     }
-  };
+  }, [address]);
   return (
     <>
       <div className={styles.details}>
@@ -25,7 +27,10 @@ export const CheckoutDetails = () => {
           </div>
           {step === "address" && (
             <>
-              <DeliveryForm redirectToPayment={redirectToPayment} />
+              <DeliveryForm
+                redirectToPayment={redirectToPayment}
+                address={address}
+              />
             </>
           )}
         </section>

@@ -1,4 +1,5 @@
 .summary {
+  margin-bottom: 100px;
   .cost {
     margin-top: 15px;
     .price {
@@ -11,6 +12,7 @@
       a {
         flex-grow: 1;
         text-align: right;
+        font-weight: 500;
       }
     }
   }

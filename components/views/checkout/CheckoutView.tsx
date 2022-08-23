@@ -5,11 +5,12 @@ import { CheckoutLogin } from "../../organisms/CheckoutSteps/CheckoutLogin";
 import { CheckoutDelivery } from "../../organisms/CheckoutSteps/CheckoutDelivery";
 export const CheckoutView = () => {
   const FirebaseCtx = useContext(FirebaseContext);
-  const { user } = FirebaseCtx;
+  const { currentUser } = FirebaseCtx;
   const [step, changeStep] = useState("login");
   useEffect(() => {
-    if (user) {
-      if (user.uid) {
+    console.log(currentUser);
+    if (currentUser) {
+      if (currentUser.uid) {
         changeStep("delivery");
       }
     }
