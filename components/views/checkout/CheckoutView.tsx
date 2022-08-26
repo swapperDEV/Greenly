@@ -3,6 +3,7 @@ import { MotionProvider } from "../../providers/MotionProvider";
 import { FirebaseContext } from "../../../store/firebase-context";
 import { CheckoutLogin } from "../../organisms/CheckoutSteps/CheckoutLogin";
 import { CheckoutDelivery } from "../../organisms/CheckoutSteps/CheckoutDelivery";
+import { CompletePayment } from "../../organisms/CompletePayment/CompletePayment";
 export const CheckoutView = () => {
   const FirebaseCtx = useContext(FirebaseContext);
   const { currentUser } = FirebaseCtx;
@@ -19,7 +20,8 @@ export const CheckoutView = () => {
     <MotionProvider>
       <>
         {step === "login" && <CheckoutLogin changeStep={changeStep} />}
-        {step === "delivery" && <CheckoutDelivery />}
+        {step === "delivery" && <CheckoutDelivery changeStep={changeStep} />}
+        {step === "completed" && <CompletePayment />}
       </>
     </MotionProvider>
   );

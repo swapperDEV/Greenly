@@ -154,10 +154,7 @@ export const DeliveryForm = ({
                   <p className={styles.error}>
                     {typeof error === "string" && error}
                   </p>
-                  <GreenButton
-                    text="                Save and continue
-"
-                  />
+                  <GreenButton text="Save and continue" />
                 </div>
               </form>
             )}

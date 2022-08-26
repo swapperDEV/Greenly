@@ -5,11 +5,19 @@ import { FaHome } from "@react-icons/all-files/fa/FaHome";
 import { FaMoneyBill as FaMoney } from "@react-icons/all-files/fa/FaMoneyBill";
 import { GreenButton } from "../../atoms/Buttons/GreenButton/GreenButton";
 import { Paying } from "../../atoms/Paying/Paying";
-export const CheckoutDetails = () => {
+export const CheckoutDetails = ({
+  completePayment,
+}: {
+  completePayment: Function;
+}) => {
   const [step, changeStep] = useState("address");
   const [address, setAddress] = useState(null);
   const redirectToPayment = (values: any) => {
     setAddress(values);
+  };
+  const submitPayment = () => {
+    changeStep("completed");
+    completePayment();
   };
   useEffect(() => {
     if (address !== null) {
@@ -22,7 +30,7 @@ export const CheckoutDetails = () => {
         <section
           className={step === "address" ? styles.shipping : styles.shippingOff}
         >
-          <div className={styles.head} onClick={() => changeStep("address")}>
+          <div className={styles.head}>
             <p>Delivery</p> <FaHome />
           </div>
           {step === "address" && (
@@ -40,7 +48,7 @@ export const CheckoutDetails = () => {
           </div>
           {step === "payment" && (
             <>
-              <Paying />
+              <Paying submitPayment={submitPayment} />
             </>
           )}
         </section>
