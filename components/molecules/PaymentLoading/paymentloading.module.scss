@@ -1,0 +1,13 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 50vh;
+  p {
+    font-size: 1.5rem;
+    margin-top: 25px;
+    color: gray;
+  }
+}

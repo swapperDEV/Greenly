@@ -1,0 +1,39 @@
+@import "../../../styles/colors.scss";
+.orderWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  .orderCheck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      border-bottom: 1px solid $green;
+      cursor: pointer;
+      transition: 0.1s ease;
+    }
+    p:hover {
+      transform: scale(1.1);
+    }
+  }
+  svg {
+    margin-left: 5px;
+    background-color: $green;
+    border-radius: 50px;
+    color: white;
+    padding: 5px;
+    box-sizing: content-box;
+    transition: 0.1s ease;
+  }
+  svg:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  .orderNumber {
+    display: flex;
+    .number {
+      color: $green;
+    }
+  }
+}

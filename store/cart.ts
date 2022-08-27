@@ -57,6 +57,9 @@ export const cartSlice = createSlice({
     removeCheckoutProducts: (state) => {
       state.checkout = {};
     },
+    removeCartProducts: (state) => {
+      state.cart = [];
+    },
   },
 });
 
@@ -67,6 +70,7 @@ export const {
   removeFromCart,
   checkoutProducts,
   removeCheckoutProducts,
+  removeCartProducts,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
