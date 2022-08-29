@@ -6,6 +6,7 @@
   text-align: center;
   .orderCheck {
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     p {
@@ -32,6 +33,10 @@
   }
   .orderNumber {
     display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    align-items: cetner;
     .number {
       color: $green;
     }

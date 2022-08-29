@@ -10,7 +10,7 @@ export const Input = ({
   type: string;
   name: string;
   onChange: any;
-  onBlur: any;
+  onBlur?: any;
   value: string;
 }) => {
   const [label, setLabel] = useState(styles.null);
@@ -29,7 +29,7 @@ export const Input = ({
           type={type}
           name={name}
           onChange={onChange}
-          onBlur={onBlur}
+          onBlur={onBlur && onBlur}
           value={value}
           onClick={() => activateLabel()}
         />

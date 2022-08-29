@@ -11,8 +11,10 @@ import {
   removeCartProducts,
   removeCheckoutProducts,
 } from "../../../store/cart";
+import img from "../../../assets/headPlant.png";
 import { FaCopy } from "@react-icons/all-files/fa/FaCopy";
 import { useEffectOnce } from "usehooks-ts";
+import Image from "next/image";
 
 type OrderType = {
   products: Array<ProductType>;
@@ -44,9 +46,8 @@ export const CompletePayment = () => {
           products: checkout.products,
           price: checkout.total,
           number: orderNumber,
-          user: firebaseCtx.currentUser.uid
-            ? firebaseCtx.currentUser.uid
-            : "guest",
+          user: firebaseCtx.currentUser ? firebaseCtx.currentUser.uid : "guest",
+          status: "confirmed",
         };
         pushOrder(orderInfo);
       }
@@ -63,6 +64,7 @@ export const CompletePayment = () => {
     <>
       {loaded ? (
         <div className={styles.orderWrapper}>
+          <Image src={img} height="420px" />
           <div className={styles.orderNumber}>
             <p>
               Order created -{" "}
@@ -71,9 +73,6 @@ export const CompletePayment = () => {
             <FaCopy
               onClick={() => navigator.clipboard.writeText(orderNumber)}
             />
-          </div>
-          <div className={styles.orderCheck}>
-            <p onClick={() => Router.push("orders")}>Check order</p>
           </div>
         </div>
       ) : (

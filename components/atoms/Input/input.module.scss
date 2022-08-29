@@ -31,3 +31,37 @@
     height: 20px;
   }
 }
+
+.input2 {
+  width: 100%;
+  position: relative;
+  input {
+    width: 100%;
+    padding: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 1rem;
+    background-color: transparent;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid black;
+    color: rgb(70, 69, 69);
+  }
+  label {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    height: 100%;
+    transition: 0.3s ease;
+  }
+  .label {
+    padding-left: 8px;
+    padding-right: 8px;
+    left: 10px;
+    top: -10px;
+    background-color: white;
+    transform: scale(0.8);
+    border-radius: 50px;
+    height: 20px;
+  }
+}

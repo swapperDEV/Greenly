@@ -10,7 +10,9 @@ import { ThemeProvider } from "@mui/material";
 const theme = createTheme({
   palette: {
     primary: orange,
-    secondary: green,
+    secondary: {
+      main: "#00b302",
+    },
   },
 });
 export const SiteTemplate = ({ view }: { view: JSX.Element }) => {
