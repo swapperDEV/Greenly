@@ -89,3 +89,41 @@
     transform: rotate(0deg) scale(1);
   }
 }
+
+@media (max-width: 1345px) {
+  .subpageList {
+    li {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+}
+
+@media (max-width: 1245px) {
+  .subpageList {
+    li {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+}
+
+@media (max-width: 1167px) {
+  .subpageList {
+    li {
+      margin-left: 15px;
+      margin-right: 15px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .subpageList {
+    li {
+      margin-left: 15px;
+      margin-right: 15px;
+      font-size: 1.1rem;
+    }
+  }
+}

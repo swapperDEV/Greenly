@@ -17,3 +17,15 @@
     color: #001d01;
   }
 }
+
+@media (max-width: 1240px) {
+  .header {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 1167px) {
+  .header {
+    font-size: 2rem;
+  }
+}

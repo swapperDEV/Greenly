@@ -26,3 +26,10 @@
   background-color: $wheat;
   opacity: 0.9;
 }
+
+@media (max-width: 1340px) {
+  .wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
