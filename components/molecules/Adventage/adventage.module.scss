@@ -47,3 +47,27 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 750px) {
+  .pro {
+    padding: 15px;
+    font-size: 0.9rem;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 615px) {
+  .pro {
+    padding: 9px;
+    font-size: 0.9rem;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 543px) {
+  .pro {
+    padding: 9px;
+    font-size: 0.7rem;
+    max-width: 110px;
+  }
+}

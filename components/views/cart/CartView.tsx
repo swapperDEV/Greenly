@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MotionProvider } from "../../providers/MotionProvider";
 import { useSelector } from "react-redux";
 import { IStore } from "../../../types/store";
 import { CartProducts } from "../../organisms/CartProducts/CartProducts";
 import { CartSummary } from "../../organisms/CartSummary/CartSummary";
 import styles from "./cart.module.scss";
+import { ToastContainer, toast } from "react-toastify";
 export const CartView = () => {
   const { cart } = useSelector((state: IStore) => state.cart);
   return (

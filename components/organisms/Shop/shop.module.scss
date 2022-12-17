@@ -11,3 +11,17 @@
     margin-left: 100px;
   }
 }
+
+@media (max-width: 750px) {
+  .wrapper {
+    .products {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: 525px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}

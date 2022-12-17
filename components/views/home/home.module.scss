@@ -83,3 +83,69 @@
     }
   }
 }
+.imageL {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .imageXL {
+    display: none;
+  }
+  .imageL {
+    display: flex;
+  }
+  .wrapper {
+    .image {
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 250px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    padding-top: 10px;
+  }
+  .image {
+    transform: translate(20px, 200px) !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .image {
+    transform: translate(10px, 250px) !important;
+  }
+}
+
+@media (max-width: 1300px) {
+  .wrapper {
+    padding-bottom: 450px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    padding-bottom: 350px;
+  }
+}
+
+@media (max-width: 550px) {
+  .adventagesMain {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper {
+    padding-bottom: 150px;
+  }
+  .image {
+    transform: translate(20px, 110px) scale(0.8) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .image {
+    transform: translate(20px, 100px) scale(0.7) !important;
+  }
+}

@@ -18,5 +18,3 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 export default MyApp;
-
-//https://dribbble.com/shots/17383791/attachments/12507660?mode=media

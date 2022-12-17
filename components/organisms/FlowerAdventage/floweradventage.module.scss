@@ -56,3 +56,20 @@
     transform: scale(1.1);
   }
 }
+
+@media (max-width: 1000px) {
+  .adventageRight {
+    right: 5%;
+    top: 15%;
+  }
+}
+
+@media (max-width: 750px) {
+  .adventageBottom,
+  .adventageLeft,
+  .adventageRight {
+    svg {
+      font-size: 1.7rem;
+    }
+  }
+}

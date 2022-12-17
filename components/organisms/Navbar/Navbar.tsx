@@ -2,15 +2,19 @@ import React, { useRef, useState, useEffect } from "react";
 import styles from "./menu.module.scss";
 import { Header } from "../../molecules/Header/Header";
 import { NavbarList } from "../../molecules/NavbarList/NavbarList";
+import { Spin as Hamburger } from "hamburger-react";
 
 export const Navbar = () => {
   const [scrollPosition, setScrollPosition]: any = useState(0);
   const [menuClass, setMenuClass]: any = useState(`${styles.wrapper}`);
+  const [navDisplay, changeNavDisplay] = useState(false);
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
   };
-
+  const navToggle = () => {
+    changeNavDisplay(!navDisplay);
+  };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -25,11 +29,32 @@ export const Navbar = () => {
       setMenuClass(`${styles.wrapper}`);
     }
   }, [scrollPosition]);
+
   return (
     <div className={menuClass}>
       <div className={styles.underline}>
         <Header />
-        <NavbarList />
+        <div className={styles.desktop}>
+          <NavbarList type={"desktop"} />
+        </div>
+        <div className={styles.mobile}>
+          {!navDisplay && (
+            <div className={styles.warning}>
+              Its beta! On mobile please use horizontal view to see all content
+            </div>
+          )}
+          {navDisplay && (
+            <div className={styles.navMobile}>
+              <NavbarList type={"mobile"} />
+            </div>
+          )}
+          <Hamburger
+            distance="lg"
+            size={30}
+            toggled={navDisplay}
+            toggle={navToggle}
+          />
+        </div>
       </div>
     </div>
   );

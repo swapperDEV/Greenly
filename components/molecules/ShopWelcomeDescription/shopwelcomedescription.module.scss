@@ -10,3 +10,16 @@
     color: $green;
   }
 }
+
+@media (max-width: 600px) {
+  .headText {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .headText {
+    transform: translateY(-50px);
+    font-size: 1.5rem;
+  }
+}

@@ -29,3 +29,38 @@
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 1000px) {
+  .wrapper {
+    .footer {
+      .footerChild {
+        font-size: 0.8rem !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .wrapper {
+    .footer {
+      flex-direction: column;
+      .footerChild {
+        font-size: 1.2em !important;
+      }
+      .footerDescription {
+        padding-right: 5px;
+        border-right: 0px solid #b9b8ab;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .wrapper {
+    .footer {
+      .footerChild {
+        font-size: 0.8rem !important;
+      }
+    }
+  }
+}

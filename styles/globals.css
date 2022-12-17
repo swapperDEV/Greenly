@@ -27,3 +27,11 @@ p {
 .MuiSlider-colorSecondary {
   color: #00b302 !important;
 }
+
+@media (max-width: 525px) {
+  .css-1nbic85 {
+    text-align: center !important;
+    margin: 10px auto 10px auto !important;
+    display: flex;
+  }
+}

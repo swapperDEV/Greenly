@@ -16,3 +16,14 @@
   }
   margin-bottom: 100px;
 }
+
+@media (max-width: 450px) {
+  .wrapper {
+    input {
+      width: 250px;
+    }
+    button {
+      width: 250px;
+    }
+  }
+}

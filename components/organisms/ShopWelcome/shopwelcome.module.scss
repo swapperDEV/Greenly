@@ -104,3 +104,16 @@
     width: 100vw;
   }
 }
+
+@media (max-width: 650px) {
+  .wrapper {
+    .imageLeft {
+      width: 100px;
+    }
+    .imageRight {
+      width: 100px;
+    }
+    .description {
+    }
+  }
+}
