@@ -13,7 +13,7 @@
     padding-top: 2px;
     top: 0%;
     overflow: hidden;
-    z-index: 3;
+    z-index: 1;
   }
   .imageRight {
     background-color: $wheat;
@@ -23,7 +23,7 @@
     width: 150px;
     position: absolute;
     overflow: hidden;
-    z-index: 3;
+    z-index: 1;
   }
   .description {
     display: flex;
@@ -112,6 +112,49 @@
     }
     .imageRight {
       width: 100px;
+    }
+    .description {
+      height: 250px;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .wrapper {
+    .imageLeft {
+      top: -20%;
+    }
+    .imageRight {
+      top: -20%;
+    }
+    .description {
+    }
+  }
+}
+
+@media (max-width: 410px) {
+  .wrapper {
+    .imageLeft {
+      top: -30%;
+      width: 80px;
+    }
+    .imageRight {
+      top: -30%;
+      width: 80px;
+    }
+    .description {
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 310px) {
+  .wrapper {
+    .imageLeft {
+      width: 60px;
+    }
+    .imageRight {
+      width: 60px;
     }
     .description {
     }

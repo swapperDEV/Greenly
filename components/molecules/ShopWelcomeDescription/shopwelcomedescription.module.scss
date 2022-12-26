@@ -21,5 +21,19 @@
   .headText {
     transform: translateY(-50px);
     font-size: 1.5rem;
+    button {
+      margin-top: 5px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .headText {
+    transform: translateY(-50px);
+    font-size: 1.2rem;
+    button {
+      transform: scale(0.7);
+      margin-top: 5px;
+    }
   }
 }

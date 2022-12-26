@@ -20,13 +20,13 @@ export const NavbarList = ({ type }: { type: string }) => {
   const subpagesList = [
     { name: "Home", link: "home" },
     { name: "Shop", link: "shop" },
-    { name: "Check Plant", link: "check" },
+    { name: "Check Plant", link: "shop" },
     { name: "Your Orders", link: "orders" },
   ];
   const subpagesMobileList = [
-    { name: "H", link: "home" },
-    { name: "S", link: "shop" },
-    { name: "O", link: "orders" },
+    { name: "Home", link: "home" },
+    { name: "Shop", link: "shop" },
+    { name: "Orders", link: "orders" },
   ];
   const userSignOut = () => {
     signOutUser();
@@ -92,7 +92,7 @@ export const NavbarList = ({ type }: { type: string }) => {
               >
                 <FaShoppingCart
                   className={basketWiggle ? styles.wiggle : styles.null}
-                />
+                />{" "}
                 {cart.length > 0 && <p className={styles.count}>{cartCount}</p>}
               </div>
             </Link>

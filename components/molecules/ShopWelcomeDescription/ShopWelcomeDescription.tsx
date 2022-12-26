@@ -9,8 +9,9 @@ export const ShopWelcomeDescription = () => {
         Take care Of <br /> the <i>Tress</i>, they <br /> Will Take <a>Care</a>
         <br />
         Of you.
+        <br />
+        <GreenButton text={"Shop now"} />
       </h1>
-      <GreenButton text={"Shop now"} />
     </>
   );
 };

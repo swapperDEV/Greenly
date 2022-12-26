@@ -41,7 +41,8 @@
 }
 .adventageBottom {
   position: absolute;
-  bottom: 0%;
+  left: 50%;
+  bottom: 2%;
   transform: translate(100%, 50%);
   svg {
     background-color: $green;
@@ -70,6 +71,21 @@
   .adventageRight {
     svg {
       font-size: 1.7rem;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .adventageRight,
+  .adventageLeft,
+  .adventageBottom {
+    position: static !important;
+    transform: none;
+    div {
+      transform: none;
+      div {
+        transform: none;
+      }
     }
   }
 }

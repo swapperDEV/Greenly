@@ -51,8 +51,32 @@
   }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 760px) {
   .footerPlant {
+    .plantDescription {
+      font-size: 0.7rem;
+      margin-left: 15px;
+      a {
+        font-size: 0.6rem;
+        color: #d64c01;
+      }
+    }
+  }
+  .plantXL {
+    display: none;
+  }
+  .plantL {
+    display: block;
+  }
+  .plantS {
+    display: none;
+  }
+}
+
+@media (max-width: 693px) {
+  .footerPlant {
+    margin-left: 10px;
+    margin-right: 10px;
     margin-top: 20px;
     .plantDescription {
       font-size: 0.5rem;
@@ -75,14 +99,16 @@
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 432px) {
   .footerPlant {
+    margin-left: 7px;
+    margin-right: 7px;
     margin-top: 10px;
     .plantDescription {
-      font-size: 0.5rem;
+      font-size: 0.6em;
       margin-left: 15px;
       a {
-        font-size: 0.4rem;
+        font-size: 0.5rem;
         color: #d64c01;
       }
     }
@@ -94,7 +120,24 @@
     display: none;
   }
   .plantS {
-    transform: translateY(10px);
+    transform: translateY(10px) scale(0.7);
     display: block;
+  }
+}
+
+@media (max-width: 397px) {
+  .footerPlant {
+    margin-top: 5px;
+    .plantDescription {
+      font-size: 0.4rem;
+      margin-left: 10px;
+      a {
+        font-size: 0.3rem;
+        color: #d64c01;
+      }
+    }
+  }
+  .plantS {
+    transform: translateY(10px) scale(0.7);
   }
 }

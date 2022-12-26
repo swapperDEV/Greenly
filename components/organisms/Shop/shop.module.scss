@@ -20,6 +20,18 @@
   }
 }
 
+@media (max-width: 470px) {
+  .wrapper {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    margin-top: 10px;
+  }
+}
+
 @media (max-width: 525px) {
   .wrapper {
     flex-direction: column;

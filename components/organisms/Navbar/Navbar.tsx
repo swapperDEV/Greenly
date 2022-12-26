@@ -31,31 +31,30 @@ export const Navbar = () => {
   }, [scrollPosition]);
 
   return (
-    <div className={menuClass}>
-      <div className={styles.underline}>
-        <Header />
-        <div className={styles.desktop}>
-          <NavbarList type={"desktop"} />
-        </div>
-        <div className={styles.mobile}>
-          {!navDisplay && (
-            <div className={styles.warning}>
-              Its beta! On mobile please use horizontal view to see all content
-            </div>
-          )}
-          {navDisplay && (
-            <div className={styles.navMobile}>
-              <NavbarList type={"mobile"} />
-            </div>
-          )}
-          <Hamburger
-            distance="lg"
-            size={30}
-            toggled={navDisplay}
-            toggle={navToggle}
-          />
+    <>
+      <div className={menuClass}>
+        <div className={styles.underline}>
+          <Header />
+          <div className={styles.desktop}>
+            <NavbarList type={"desktop"} />
+          </div>
+          <div className={styles.mobile}>
+            <Hamburger
+              distance="lg"
+              size={30}
+              toggled={navDisplay}
+              toggle={navToggle}
+            />
+          </div>
         </div>
       </div>
-    </div>
+      {navDisplay && (
+        <div className={styles.navMobile}>
+          <div className={styles.mobileList}>
+            <NavbarList type="mobile" />
+          </div>
+        </div>
+      )}
+    </>
   );
 };

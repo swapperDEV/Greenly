@@ -10,7 +10,6 @@
   margin-left: 90px;
   margin-right: 180px;
   padding-bottom: 140px;
-  flex-grow: 1;
   .image {
     margin-left: 10px;
     width: 23vw;
@@ -131,21 +130,62 @@
 }
 
 @media (max-width: 550px) {
+  .wrapper {
+    padding-bottom: 230px;
+  }
   .adventagesMain {
+    display: none;
+  }
+  .adventagesMobile {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    div {
+      margin-left: 10px;
+      margin-right: 10px;
+      position: static !important;
+    }
+  }
+}
+@media (min-width: 551px) {
+  .adventagesMobile {
     display: none;
   }
 }
 @media (max-width: 500px) {
   .wrapper {
-    padding-bottom: 150px;
+    height: 360px;
+    padding-bottom: 90px;
   }
   .image {
-    transform: translate(20px, 110px) scale(0.8) !important;
+    transform: translate(50px, 150px) scale(0.8) !important;
   }
 }
 
 @media (max-width: 480px) {
+  .wrapper {
+    height: 300px;
+    padding-bottom: 90px;
+  }
   .image {
-    transform: translate(20px, 100px) scale(0.7) !important;
+    transform: translate(40px, 100px) scale(0.7) !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    justify-content: flex-start;
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 330px) {
+  .wrapper {
+    height: 240px;
+    padding-bottom: 0px;
+  }
+  .image {
+    transform: translate(80px, 60px) scale(0.4) !important;
   }
 }

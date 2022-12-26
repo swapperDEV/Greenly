@@ -3,3 +3,9 @@
   padding-bottom: 40px;
   display: flex;
 }
+
+@media (max-width: 880px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}

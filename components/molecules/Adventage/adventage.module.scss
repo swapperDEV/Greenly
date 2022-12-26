@@ -68,6 +68,8 @@
   .pro {
     padding: 9px;
     font-size: 0.7rem;
-    max-width: 110px;
+    svg {
+      margin-right: 5px;
+    }
   }
 }

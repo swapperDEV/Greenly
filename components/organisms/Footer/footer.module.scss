@@ -43,11 +43,11 @@
 @media (max-width: 760px) {
   .wrapper {
     .footer {
-      flex-direction: column;
       .footerChild {
-        font-size: 1.2em !important;
+        font-size: 0.8em !important;
       }
       .footerDescription {
+        padding-left: 5px;
         padding-right: 5px;
         border-right: 0px solid #b9b8ab;
       }
@@ -55,11 +55,27 @@
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 693px) {
   .wrapper {
     .footer {
+      padding-bottom: 25px;
       .footerChild {
-        font-size: 0.8rem !important;
+        font-size: 0.6em !important;
+      }
+      .footerDescription {
+        padding-left: 5px;
+        padding-right: 5px;
+        border-right: 0px solid #b9b8ab;
+      }
+    }
+  }
+}
+
+@media (max-width: 561px) {
+  .wrapper {
+    .footer {
+      .footerDescription {
+        display: none;
       }
     }
   }
