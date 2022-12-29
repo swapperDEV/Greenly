@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://comforting-gelato-5ad664.netlify.app/welcome"> [Greenly]</a></h1>
+<h1 align="center"><a href="https://sparkling-yeot-930b1d.netlify.app/ "> [Greenly]</a></h1>
 <p align="center">Greenly is an e-commerce shop, with green items. I prefer desktop mode!
 </p>
 
