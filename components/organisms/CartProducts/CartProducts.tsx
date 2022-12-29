@@ -14,7 +14,7 @@ export const CartProducts = ({
         Your Bag 🛒
       </p>
       {products.length > 0 ? (
-        <div>
+        <div className={styles.products}>
           {products.map((product) => {
             return (
               <CartProduct edit={true} key={product.name} product={product} />

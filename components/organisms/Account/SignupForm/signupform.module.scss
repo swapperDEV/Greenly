@@ -52,3 +52,30 @@
   color: $orange;
   font-weight: rgba(165, 0, 0, 0.849);
 }
+
+@media (max-width: 890px) {
+  .wrapper {
+    img {
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 305px) {
+  .wrapper {
+    transform: scale(0.6);
+  }
+}

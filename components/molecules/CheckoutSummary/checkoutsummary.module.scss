@@ -27,3 +27,15 @@
     }
   }
 }
+
+@media (max-width: 830px) {
+  .summary {
+    width: 100%;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

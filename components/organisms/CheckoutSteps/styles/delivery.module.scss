@@ -13,3 +13,11 @@
     align-items: flex-start;
   }
 }
+
+@media (max-width: 830px) {
+  .wrapper {
+    .section {
+      flex-direction: column;
+    }
+  }
+}

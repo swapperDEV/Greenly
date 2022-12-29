@@ -23,3 +23,47 @@
     border-bottom: $green 1px solid;
   }
 }
+
+@media (max-width: 800px) {
+  .wrapper {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 420px) {
+  .wrapper {
+    margin-right: 0px;
+    .bag {
+      font-size: 1.2rem;
+      margin-left: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .bagOff {
+      font-size: 1.4rem;
+    }
+    .products {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .wrapper {
+    margin-right: 0px;
+    .bag {
+      font-size: 1.4rem;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .bagOff {
+      font-size: 1.4rem;
+    }
+    .products {
+      transform: scale(0.8);
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
